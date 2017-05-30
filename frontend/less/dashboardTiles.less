@@ -1,0 +1,98 @@
+.dashboard-tiles {
+
+}
+
+.dashboard-tiles-title {
+    margin-top:@space-x-large;
+    margin-bottom:@space-x-small;
+    .font-style-large;
+}
+
+.dashboard-tiles-items {
+    flex: 1 1 auto;
+    display: flex;
+    @media all and (max-width: @device-width-medium) {
+        display:block;
+    }
+}
+
+.dashboard-tiles-tile {
+    width:30%;
+    background-color:@content-background;
+    flex-grow: 1;
+    transition: background-color 0.3s;
+    cursor: pointer;
+    @media all and (max-width: @device-width-large) {
+        width:32%;
+    }
+    @media all and (max-width: @device-width-medium) {
+        width:100%;
+        margin: 0 0 @space-x-small;
+    }
+    &:nth-child(even) {
+        margin:0 5%;
+        @media all and (max-width: @device-width-large) {
+            margin: 0 2%;
+        }
+        @media all and (max-width: @device-width-medium) {
+            width:100%;
+            margin: 0 0 @space-x-small;
+        }
+    }
+    &:hover {
+        background-color:@ui-grey-light;
+        .dashboard-tiles-tile-graphic {
+            background-size: 108% auto;
+            @media all and (max-width: @device-width-medium) {
+                background-size: contain;
+            }
+            @media all and (max-width: @device-width-small) {
+                background-size: 108% auto;
+            }
+        }
+        .dashboard-tiles-tile-title {
+            color:@primary-color-darker;
+        }
+    }
+}
+
+.dashboard-tiles-tile-graphic {
+    height: 140px;
+    background-size: 100% auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition:background-size 0.3s;
+    @media all and (max-width: @device-width-medium) {
+        float:left;
+        width:30%;
+        background-size: contain;
+    }
+    @media all and (max-width: @device-width-small) {
+        float:auto;
+        width:100%;
+        background-size: 100% auto;
+    }
+}
+
+.dashboard-tiles-tile-content {
+    .padding-all-small;
+    @media all and (max-width: @device-width-medium) {
+        float:left;
+        width:70%;
+    }
+
+    @media all and (max-width: @device-width-small) {
+        float:auto;
+        width:100%;
+    }
+}
+
+.dashboard-tiles-tile-title {
+    .font-color-primary;
+    padding-bottom:@space-x-small;
+}
+
+.dashboard-tiles-tile-description {
+    .font-style-small;
+    .font-color-light;
+}
