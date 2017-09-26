@@ -5,5 +5,5 @@ import EditDashboardTilesContainer from './containers/editDashboardTilesContaine
 
 registerComponent('dashboardTiles', 'Dashboard Tiles', DashboardTilesContainer, 'dashboard:learner');
 registerReducer('dashboardTiles', DashboardTilesReducer);
-registerRoute({path: 'dashboardTiles', component: EditDashboardTilesContainer});
+registerRoute('dashboardTiles', EditDashboardTilesContainer);
 registerMenuItem({text: 'Dashboard Tiles', _link: "dashboardTiles", _icon: "grid", _permission: "admin"}, 0);
