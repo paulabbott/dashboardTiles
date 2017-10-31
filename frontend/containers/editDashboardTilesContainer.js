@@ -46,7 +46,6 @@ var EditDashboardTilesContainer = React.createClass({
             this.updateHeader();
         }).bind(this))
         .catch((function(response) {
-            console.log(response);
             if (response.data.error) {
                 this.setState({
                     _hasErrored: true,

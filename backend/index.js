@@ -6,7 +6,7 @@ Bloom.registerPlugin('dashboardTiles', function(app, passport, io) {
     DashboardTile.findOne({}, function(err, dashboardTile) {
         if (!dashboardTile) {
             DashboardTile.create({}, function(err, dashboardTile) {
-                console.log(dashboardTile);
+                
             });
         }
     })

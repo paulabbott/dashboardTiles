@@ -8,9 +8,9 @@ var tiles = mongoose.Schema({
     "_link": String,
     "_shouldOpenNewWindow": {type: Boolean, default: true},
     "_isPublished": {type: Boolean, default: false},
-    "_createdAt": {type: String, default: new Date()},
+    "_createdAt": {type: String, default: Date.now},
     "_createdBy": {type: mongoose.Schema.Types.ObjectId, ref:'User'},
-    "_updatedAt": {type: String, default: new Date()},
+    "_updatedAt": {type: String, default: Date.now},
     "_updatedBy": {type: mongoose.Schema.Types.ObjectId, ref:'User'}
 });
 

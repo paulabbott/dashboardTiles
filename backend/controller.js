@@ -38,7 +38,6 @@ module.exports = {
     },
 
     updateDashboardTiles: function(req, callback) {
-        console.log(req.body);
         DashboardTile.findOneAndUpdate({}, req.body, {new: true}, function(err, dashboardTile) {
             if (err) {
                 return callback({_statusCode: 500, message: 'Server error'})

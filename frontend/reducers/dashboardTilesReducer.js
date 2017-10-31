@@ -14,7 +14,6 @@ export default function(state = {}, action) {
         case FETCH_DASHBOARD_DATA:
             return action.payload._dashboardData._dashboardTiles || {};
         case UPDATE_DASHBOARD_TILES:
-            console.log(action.payload);
             return action.payload._dashboardTiles;
         case FETCH_DASHBOARD_TILES:
             return action.payload._dashboardTiles;
